@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Order Summary</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #e0e8ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      width: 320px;
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      text-align: center;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+
+    .top-img {
+      width: 100%;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    h2 {
+      margin: 10px 0;
+      color: #1f2f56;
+    }
+
+    .desc {
+      font-size: 14px;
+      color: gray;
+      margin-bottom: 20px;
+    }
+
+    .plan-box {
+      background: #f5f7ff;
+      padding: 12px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .plan-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .icon {
+      background: #dfe6fb;
+      padding: 10px;
+      border-radius: 50%;
+    }
+
+    .price {
+      font-size: 12px;
+      color: gray;
+    }
+
+    .change {
+      color: blue;
+      cursor: pointer;
+      font-size: 12px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #3829e0;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      box-shadow: 0 10px 20px rgba(56,41,224,0.3);
+    }
+
+    button:hover {
+      background: #2c1cd4;
+    }
+
+    .cancel {
+      color: gray;
+      cursor: pointer;
+      font-size: 14px;
+    }
+  </style>
+
+</head>
+<body>
+
+<div class="card">
+
+  <!-- Top Image -->
+  <img class="top-img" src="https://cdn-icons-png.flaticon.com/512/727/727240.png" alt="music">
+
+  <div class="content">
+
+    <h2>Order Summary</h2>
+
+    <p class="desc">
+      You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!
+    </p>
+
+    <!-- Plan Box -->
+    <div class="plan-box">
+      <div class="plan-left">
+        <div class="icon">🎵</div>
+        <div>
+          <strong>Annual Plan</strong>
+          <div class="price">$59.99/year</div>
+        </div>
+      </div>
+
+      <span class="change" onclick="changePlan()">Change</span>
+    </div>
+
+    <!-- Button -->
+    <button onclick="pay()">Proceed to Payment</button>
+
+    <div class="cancel" onclick="cancel()">Cancel Order</div>
+
+  </div>
+
+</div>
+
+<script>
+  function pay(){
+    alert("Proceeding to payment...");
+  }
+
+  function cancel(){
+    alert("Order cancelled");
+  }
+
+  function changePlan(){
+    alert("Change plan clicked");
+  }
+</script>
+
+</body>
+</html>
